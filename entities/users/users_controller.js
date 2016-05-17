@@ -1,3 +1,6 @@
+/* jslint node: true */
+'use strict';
+
 var User = require('./users_model');
 var jsend = require('../../extras/jsend');
 var controller = {};

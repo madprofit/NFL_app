@@ -1,3 +1,6 @@
+/* jslint node: true */
+'use strict';
+
 var express = require('express');
 var router = express.Router();
 var ctrl = require('../entities/users/users_controller');

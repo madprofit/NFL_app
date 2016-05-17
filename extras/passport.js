@@ -1,3 +1,6 @@
+/* jslint node: true */
+'use strict';
+
 var User = require('../entities/users/users_model');
 
 module.exports = function(passport, Strategy) {
