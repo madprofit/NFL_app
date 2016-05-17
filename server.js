@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/users', require('./routes/users'));
+app.use('/api/users', require('./routes/users'));
 
 app.listen(config.port, function() {
   console.log('Listening on port:', config.port);
