@@ -1,17 +1,21 @@
-angular
-  .module('myApp', [
-    'myApp.subsection',
-    'ui.router'
-  ])
-  .config(myConfig);
+(function() {
+  'use strict';
 
-myConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+  angular
+    .module('myApp', [
+      'myApp.subsection',
+      'ui.router'
+    ])
+    .config(config);
 
-function myConfig($stateProvider, $urlRouterProvider) {
-  $stateProvider
-    .state('subsection', {
-      url: '/subsection',
-      templateUrl: 'subsection/subsection.html',
-      controller: 'SubsectionController as ctrl'
-    });
-}
+  config.$inject = ['$stateProvider', '$urlRouterProvider'];
+
+  function config($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('subsection', {
+        url: '/subsection',
+        templateUrl: 'subsection/subsection.html',
+        controller: 'SubsectionController as ctrl'
+      });
+  }
+})();

@@ -1,10 +1,14 @@
-angular
-  .module('myApp.subsection', [])
-  .controller('SubsectionController', SubsectionController);
+(function() {
+  'use strict';
 
-SubsectionController.$inject = [];
+  angular
+    .module('myApp.subsection', [])
+    .controller('SubsectionController', SubsectionController);
 
-function SubsectionController() {
-  var self = this;
-  self.hello = 'Hello World';
-}
+  SubsectionController.$inject = [];
+
+  function SubsectionController() {
+    var self = this;
+    self.hello = 'Hello World';
+  }
+})();
