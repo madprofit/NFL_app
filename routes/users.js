@@ -1,17 +1,18 @@
 /* jslint node: true */
 'use strict';
 
-var express = require('express');
-var router = express.Router();
 var ctrl = require('../entities/users/users_controller');
 
-router.route('/')
-  .get(ctrl.index)
-  .post(ctrl.create);
+module.exports = function(router) {
 
-router.route('/:id')
-  .get(ctrl.show)
-  .put(ctrl.update)
-  .delete(ctrl.destroy);
+  router.route('/')
+    .get(ctrl.index)
+    .post(ctrl.create);
 
-module.exports = router;
+  router.route('/:id')
+    .get(ctrl.show)
+    .put(ctrl.update)
+    .delete(ctrl.destroy);
+
+  return router;
+};

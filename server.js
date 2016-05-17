@@ -30,7 +30,13 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/api/users', require('./routes/users'));
+require('./routes/index')(app, passport);
+
+var apiRoutes = ['users'];
+
+apiRoutes.forEach(function(route) {
+  app.use( '/api/' + route, require('./routes/' + route)( express.Router() ) );
+});
 
 app.listen(config.port, function() {
   console.log('Listening on port:', config.port);
