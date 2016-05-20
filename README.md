@@ -1,6 +1,6 @@
 #NFL APP
 
-Using the NFL API users will have NFL player stats, projections and twitter mentions after searching their name with this app.
+Using the NFL API users will have NFL player stats, projections and twitter mentions after searching their name with this app. The app's views will change thru showing the specific category of content until the end where all views come together on the last view. 
 
 
 
