@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="nflApp">
 <head>
   <title>My App</title>
   <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
+  <script type="text/javascript" src="./app.js"></script>
+  <script type="text/javascript" src="./js/player-controller.js"></script>
+  <script type="text/javascript" src="./js/listcontroller.js"></script>
+
 </head>
 <body>
 
-  <div ui-view></div>
+  <div ui-view>
+
+
+  <canvas id="doughnut" class="chart chart-doughnut"
+  chart-data="data" chart-labels="labels">
+</canvas>
+  </div>
 
   <!-- FOR PRODUCTION USE -->
-  <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script> -->
-  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script> -->
 
-  <script type="text/javascript" src="/js/components.js"></script>
-  <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>

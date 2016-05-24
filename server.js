@@ -25,18 +25,22 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({secret: config.sessions_secret, resave: false, saveUninitialized: false}));
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/index')(app, passport);
+app.use('/users', require('./routes/users'));
+app.use('/players', require('./routes/playersRouter'));
 
-var apiRoutes = ['users'];
+// require('./routes/index')(app, passport);
 
-apiRoutes.forEach(function(route) {
-  app.use( '/api/' + route, require('./routes/' + route)( express.Router() ) );
-});
+//var apiRoutes = ['users'];
+// var apiRoutes = [''];
+//
+// apiRoutes.forEach(function(route) {
+//   app.use( 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/.json' + route, require('./routes/' + route)( express.Router() ) );
+// });
 
 app.listen(config.port, function() {
   console.log('Listening on port:', config.port);

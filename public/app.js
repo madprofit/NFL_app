@@ -1,21 +1,24 @@
-(function() {
-  'use strict';
+angular
+  .module('nflApp', ['ui.router'])
+  .config(configuration);
 
-  angular
-    .module('myApp', [
-      'myApp.subsection',
-      'ui.router'
-    ])
-    .config(config);
+function configuration($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise("/");
 
-  config.$inject = ['$stateProvider', '$urlRouterProvider'];
-
-  function config($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('subsection', {
-        url: '/subsection',
-        templateUrl: 'subsection/subsection.html',
-        controller: 'SubsectionController as ctrl'
-      });
-  }
-})();
+  $stateProvider
+    .state('search', {
+      url: '',
+      templateUrl: 'partials/search.html',
+      controller: function($scope) {}
+    })
+   .state('list', {
+      url: '/results?s',
+      templateUrl: 'partials/list.html',
+      controller: 'ListController as ctrl'
+    })
+    .state('player', {
+      url: '/list/:id',
+      templateUrl: 'partials/player.html',
+      controller: 'PlayerController as ctrl'
+    });
+}
