@@ -5,14 +5,16 @@ angular
 function ListController($http, $stateParams) {
   var self = this;
   var searchString = encodeURIComponent($stateParams.s);
+  var qb = [];
 
   $http({
     method: 'GET',
-    url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/' + searchString
+    url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
   }).then(function successCallback(response) {
-    console.log(response);
     self.results = response.data.Players;
-
     console.log(self.results);
+    // self.results.Players.forEach(function(player){
+    //   console.log(player.displayName)
+    // })
   });
 }

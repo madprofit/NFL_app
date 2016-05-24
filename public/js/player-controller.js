@@ -2,23 +2,19 @@ angular
   .module('nflApp')
   .controller('PlayerController', PlayerController);
 
-  PlayerController.$inject = ['$http', '$stateParams']
+PlayerController.$inject = ['$http', '$stateParams']
 
 function PlayerController($http, $stateParams) {
   var self = this;
-  var playerId = $stateParams.playerId;
+  var playerId = $stateParams.id;
 
-
-  function getPlayerName(){
-    $http({
-      method: 'GET',
-      url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/' + playerId
-    }).then(function successCallback(response) {
-      self.results = response.data.Search;
-      console.log(self.results);
-    });
-  }
-  getPlayerName();
+  $http({
+    method: 'GET',
+    url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
+  }).then(function successCallback(response) {
+    self.result = response.data;
+    console.log(self.result);
+  });
 }
 
 // // requst data from API

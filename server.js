@@ -10,6 +10,8 @@ var session      = require('express-session');
 var yaml         = require('node-yaml-config');
 var passport     = require('passport');
 var Strategy     = require('passport-local').Strategy;
+var FFNerd = require('fantasy-football-nerd');
+var ff = new FFNerd({ api_key:'3764iv27sbi6'});
 
 var app = express();
 var config = yaml.load(path.join(__dirname, 'config/app.yaml'));

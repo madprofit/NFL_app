@@ -1,3 +1,5 @@
 <ul>
-  <li ng-repeat="player in ctrl.results" ui-sref="player({id:player.imdbID})">{{ player.DisplayName }}</li>
+  <li ng-repeat="player in ctrl.results">
+    <a ui-sref="player({id:player.playerId})">{{ player.displayName }}</a>
+  </li>
 </ul>
