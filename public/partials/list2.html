@@ -1,0 +1,9 @@
+<input ng-model="searchText">
+<button ui-sref="list2({s:search})">Search</button>
+<ul>
+  <li ng-repeat="player2 in ctrl2.results2 | filter:searchText">  <!-- ng-if="player.displayName | orderBy: player.displayName" -->
+    <a ui-sref="player2({id:player.playerId})">
+        {{ player.playerId }}
+    </a>
+  </li>
+</ul>

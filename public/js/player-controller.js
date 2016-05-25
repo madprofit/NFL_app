@@ -7,13 +7,16 @@ PlayerController.$inject = ['$http', '$stateParams'];
 function PlayerController($http, $stateParams) {
   var self = this;
   var playerId = $stateParams.id;
+  self.playerId = playerId;
+  console.log($stateParams.id);
+
 
   $http({
     method: 'GET',
     url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
   }).then(function successCallback(response) {
-    self.result = response.data.Players[0];
-    console.log(self.result);
+    self.result1 = response.data.Players;
+    console.log(self.result1);
   });
 }
 
