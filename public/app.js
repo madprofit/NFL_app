@@ -17,7 +17,7 @@ function configuration($stateProvider, $urlRouterProvider) {
       controller: 'ListController as ctrl'
     })
     .state('player', {
-      url: '/list/:id',
+      url: '/players/:id',
       templateUrl: 'partials/player.html',
       controller: 'PlayerController as ctrl'
     });
