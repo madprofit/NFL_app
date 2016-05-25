@@ -1,14 +1,8 @@
 <input ng-model="searchText">
 <button ui-sref="list({s:search})">Search</button>
 <ul>
-<<<<<<< HEAD
   <li ng-repeat="player in ctrl.results">
     <a ui-sref="player({id:player.playerId})">{{ player.displayName }} {{ player.team }}</a>
-=======
-  <li ng-repeat="player in ctrl.results | filter:searchText">  <!-- ng-if="player.displayName | orderBy: player.displayName" -->
-    <a ui-sref="player({id:player.playerId})">
-        {{ player.playerId }}
-    </a>
->>>>>>> projections
+
   </li>
 </ul>
