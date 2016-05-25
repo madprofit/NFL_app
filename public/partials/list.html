@@ -1,5 +1,5 @@
 <ul>
   <li ng-repeat="player in ctrl.results">
-    <a ui-sref="player({id:player.playerId})">{{ player.displayName }}</a>
+    <a ui-sref="player({id:player.playerId})">{{ player.displayName }} {{ player.team }}</a>
   </li>
 </ul>
