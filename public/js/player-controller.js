@@ -2,7 +2,7 @@ angular
   .module('nflApp')
   .controller('PlayerController', PlayerController);
 
-PlayerController.$inject = ['$http', '$stateParams']
+PlayerController.$inject = ['$http', '$stateParams'];
 
 function PlayerController($http, $stateParams) {
   var self = this;
@@ -12,7 +12,7 @@ function PlayerController($http, $stateParams) {
     method: 'GET',
     url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
   }).then(function successCallback(response) {
-    self.result = response.data;
+    self.result = response.data.Players[0];
     console.log(self.result);
   });
 }

@@ -12,9 +12,9 @@ var Strategy     = require('passport-local').Strategy;
 var FFNerd = require('fantasy-football-nerd');
 var ff = new FFNerd({ api_key:'3764iv27sbi6'});
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8000;
 var mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/db';
-var secret = process.env || 'unicorns'
+var secret = process.env.SECRET || 'unicorns'
 
 var app = express();
 
