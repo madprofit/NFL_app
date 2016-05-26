@@ -40,7 +40,7 @@ function configuration($stateProvider, $urlRouterProvider) {
     })
     .state('list2', {
          url: '/results2/:s',
-         templateUrl: 'partials/list1.html',
+         templateUrl: 'partials/list2.html',
          controller: 'ListController2 as ctrl2'
        })
       .state('player1', {

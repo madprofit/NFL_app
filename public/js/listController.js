@@ -12,8 +12,8 @@ function ListController1($http, $stateParams) {
   $http({
     method: 'GET',
     url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
-  }).then(function successCallback(response1) {
-    self.results = response1.data.Players;
+  }).then(function successCallback(response) {
+    self.results = response.data.Players;
     console.log(self.results);
     // self.results.Players.forEach(function(player){
     //   console.log(player.displayName)

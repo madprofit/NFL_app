@@ -12,9 +12,9 @@ function ListController2($http, $stateParams) {
   $http({
     method: 'GET',
     url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
-  }).then(function successCallback(response2) {
-    self.results = response2.data.Players;
-    console.log(self.results);
+  }).then(function successCallback(response) {
+    self.results2 = response.data.Players;
+    console.log(self.results2);
     // self.results.Players.forEach(function(player){
     //   console.log(player.displayName)
     // })

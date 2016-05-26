@@ -1,6 +1,13 @@
 <input ng-model="ctrl2.search2" placeholder="Enter player2 name">
 <button ui-sref="list2({s:ctrl.search2})">Search</button>
 
-<!-- <input ng-model="ctrl2.search2" placeholder="Enter player2 name">
-<button ui-sref="list2({s:search2})">Search</button> -->
+<!-- <ul>
+  <li ng-repeat="player in ctrl2.results | filter: ctrl2.searchString | filter:searchText">
+    <a ui-sref="player2({id:player.playerId})">
+        {{ player.displayName }}
+    </a>
+  </li>
+</ul>
+
+
 
