@@ -6,7 +6,7 @@ function ListController1($http, $stateParams) {
   var self = this;
   var searchString = ($stateParams.s);
   self.searchString = searchString;
-  console.log($stateParams.s)
+  console.log($stateParams.s);
   var qb = [];
 
   $http({

@@ -15,8 +15,8 @@ function PlayerController($http, $stateParams) {
     method: 'GET',
     url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
   }).then(function successCallback(response) {
-    self.result1 = response.data.Players;
-    console.log(self.result1);
+    self.result = response.data.Players;
+    console.log(self.result);
   });
 }
 

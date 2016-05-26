@@ -1,28 +1,28 @@
 angular
   .module('nflApp', ['ui.router'])
-  .config(configuration);
+  .config(configuration)
+  //.directive('navBar', navBar);
 
 function configuration($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
-    .state('search1',  {
-      url: '',
-      templateUrl: 'partials/search1.html',
-      controller: function($scope) {}
-    })
-      // $stateProvider
+    .state('search1', {
+        url: '',
+        templateUrl: 'partials/search1.html',
+        controller: function($scope) {}
+      })
       // .state('search2', {
       //   url: '',
       //   templateUrl: 'partials/search2.html',
       //   controller: function($scope) {}
-      // })
-      .state('list1', {
-         url: '/results1/:s',
+      //})
+    .state('list1', {
+         url: '/results/:s',
          templateUrl: 'partials/list1.html',
          controller: 'ListController1 as ctrl1'
     })
-      .state('list2', {
+    .state('list2', {
          url: '/results2/:s',
          templateUrl: 'partials/list1.html',
          controller: 'ListController2 as ctrl2'
