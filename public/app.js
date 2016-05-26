@@ -7,11 +7,27 @@ function configuration($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
-    .state('search1', {
-        url: '',
-        templateUrl: 'partials/search1.html',
-        controller: function($scope) {}
-      })
+    .state('home', {
+     url: '/',
+      views: { '': {template: '<h1>Hello</h1>'},
+           'columnOne': {templateUrl: 'partials/search1.html'},
+           'columnTwo': {templateUrl: 'partials/search2.html'},
+            controller: function($scope) {}
+         }
+    })
+
+    // {
+    //        'columnOne': { templateUrl: 'view1'},
+    //        'columnTwo': { template: 'view2'},
+    //         controller: function($scope) {}
+    //      }
+
+  // $stateProvider
+  //   .state('search1', {
+  //       url: '',
+  //       templateUrl: 'partials/search1.html',
+  //       controller: function($scope) {}
+  //     })
       // .state('search2', {
       //   url: '',
       //   templateUrl: 'partials/search2.html',

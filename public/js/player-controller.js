@@ -15,7 +15,15 @@ function PlayerController($http, $stateParams) {
     method: 'GET',
     url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
   }).then(function successCallback(response) {
-    self.result = response.data.Players;
+    self.result = response.data.Players[1];
+    console.log(self.result);
+  });
+
+   $http({
+    method: 'GET',
+    url: 'http://www.fantasyfootballnerd.com/service/draft-projections/json/test/QB/'
+  }).then(function successCallback(response) {
+    self.result = response.data.DraftProjections[2];
     console.log(self.result);
   });
 }
