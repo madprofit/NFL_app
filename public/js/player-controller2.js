@@ -4,19 +4,11 @@ angular
 
 PlayerController.$inject = ['$http', '$stateParams'];
 
-function PlayerController($http, $stateParams) {
+function PlayerController2($http, $stateParams) {
   var self = this;
   var playerId = $stateParams.id;
   self.playerId = playerId;
   console.log($stateParams.id);
-
-  $http({
-    method: 'GET',
-    url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
-  }).then(function successCallback(response) {
-    self.result = response.data.Players[1];
-    console.log(self.result);
-  });
 
    $http({
     method: 'GET',
@@ -26,3 +18,5 @@ function PlayerController($http, $stateParams) {
     console.log(self.result);
   });
 }
+
+

@@ -43,7 +43,7 @@ function ListController1($http, $stateParams) {
           console.log('display name', response.data.DraftProjections[i].displayName);
           for(var j = 0; j < self.players.length; j++) {
             if (response.data.DraftProjections[i].displayName == self.players[j]) {
-              self.result = response.data.DraftProjections[i].displayName;
+              self.result = response.data.DraftProjections[i];
               console.log('index is: ' + i);
               self.foundMatch = true;
               continue
@@ -55,7 +55,7 @@ function ListController1($http, $stateParams) {
           console.log('No match!')
         } else {
           console.log('second $http call')
-          console.log('player is', self.result);
+          console.log('player is', self.result.displayName);
           self.players = [];
         }
       });
@@ -71,5 +71,4 @@ function ListController1($http, $stateParams) {
     console.log(player);
     self.player = player;
   }
-
 }
