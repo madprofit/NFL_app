@@ -12,23 +12,14 @@ function configuration($stateProvider, $urlRouterProvider) {
       views: { '': {template: '<h1>Hello</h1>'},
            'columnOne': {templateUrl: 'partials/search1.html', controller: 'ListController1 as ctrl1'},
            'columnTwo': {templateUrl: 'partials/search2.html', controller: 'ListController2 as ctrl2'}},
-    })
+    });
 
-
-    .state('list1', {
-         url: '/results/:s',
-         templateUrl: 'partials/list1.html',
-         controller: 'ListController1 as ctrl1'
-    })
-    .state('list2', {
-         url: '/results2/:s',
-         templateUrl: 'partials/list2.html',
-         controller: 'ListController2 as ctrl2'
-       })
-      .state('player1', {
-        url: '/players1/:id',
-        templateUrl: 'partials/player1.html',
-        controller: 'PlayerController as ctrl'
+     $stateProvider
+    .state('player', {
+      url: '/',
+      views: { '': {template: ''},
+           'columnOne': {templateUrl: 'partials/player1.html', controller: 'player-controller as playerctrl1'},
+           'columnTwo': {templateUrl: 'partials/player2.html', controller: 'player-controller2 as playerctrl2'}},
     });
 
 }

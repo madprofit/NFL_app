@@ -6,12 +6,27 @@
 <!-- <button ui-sref="list1({s:search1})">Search1</button> -->
 <ul ng-show="ctrl1.showSearch">
   <li ng-repeat="player in ctrl1.results | filter: ctrl1.searchString | filter:ctrl1.search1">  <!-- ng-if="player.displayName | orderBy: player.displayName" -->
-    <a ui-sref="player1({id:player.playerId})">
+    <a ng-click="ctrl1.show(player)">
         {{ player.displayName }}
     </a>
   </li>
 </ul>
 
+<div>
+<a ng-click="playerctrl1">
+  {{ctrl1.player.displayName}}
+  </a>
+  <br>
+  <br>
+  <a ng-click="playerctrl1">
+  {{ctrl1.player.team}}
+  </a>
+  <br>
+  <a ng-click="playerctrl1">
+  {{ctrl1.player.jersey}}
+  </a>
+
+</div>
 
 
 <!-- <input ng-model="ctrl2.search2" placeholder="Enter player2 name">

@@ -10,13 +10,13 @@ function PlayerController($http, $stateParams) {
   self.playerId = playerId;
   console.log($stateParams.id);
 
-  $http({
-    method: 'GET',
-    url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
-  }).then(function successCallback(response) {
-    self.result = response.data.Players[1];
-    console.log(self.result);
-  });
+// $http({
+//   method: 'GET',
+//   url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
+// }).then(function successCallback(response) {
+//   self.result = response.data.Players[1];
+//   console.log(self.result);
+// });
 
    $http({
     method: 'GET',
