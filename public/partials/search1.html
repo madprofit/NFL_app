@@ -1,9 +1,42 @@
 <input ng-model="ctrl1.search1" placeholder="Enter player1 name">
-<button ui-sref="list1({s:ctrl1.search1})">Search</button>
+<button ng-click="ctrl1.search()">Search</button>
+<!-- <button ng-click="list1({s:ctrl.search1})">Search</button> -->
 
+<!-- <input ng-model="searchText"> -->
+<!-- <button ui-sref="list1({s:search1})">Search1</button> -->
+<ul ng-show="ctrl1.showSearch">
+  <li ng-repeat="player in ctrl1.results | filter: ctrl1.searchString | filter:ctrl1.search1">
+    <a ng-click="ctrl1.show(player)">
+  {{ player.displayName }}
+    </a>
 
-<input ng-model="ctrl2.search2" placeholder="Enter player2 name">
-<button ui-sref="list2({s:ctrl2.search2})">Search</button>
+  </li>
+{{ctrl1.player.displayName}}
+{{ctrl1.player.team}}
+
+<div>
+<a ng-click="playerctrl1">
+
+  </a>
+  <br>
+  <br>
+  <a ng-click="playerctrl1">
+
+  </a>
+  <br>
+  <a ng-click="playerctrl1">
+  {{ctrl1.player.jersey}}
+  </a>
+  <a ng-click="playerctrl1">
+  passing TD's {{ctrl1.result.passingTD}}
+  </a>
+  <div></div>
+  </ul>
+
+</div>
+
+<!-- <input ng-model="ctrl2.search2" placeholder="Enter player2 name">
+<button ui-sref="list2({s:ctrl2.search2})">Search</button> -->
 
 
 

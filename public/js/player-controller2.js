@@ -1,10 +1,10 @@
 angular
   .module('nflApp')
-  .controller('PlayerController', PlayerController);
+  .controller('PlayerController2', PlayerController2);
 
 PlayerController.$inject = ['$http', '$stateParams'];
 
-function PlayerController($http, $stateParams) {
+function PlayerController2($http, $stateParams) {
   var self = this;
   var playerId = $stateParams.id;
   self.playerId = playerId;

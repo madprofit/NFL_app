@@ -14,7 +14,7 @@ gulp.task('build-js', function() {
 });
 
 gulp.task('build-css', function() {
-  return gulp.src('public/**/*.css')
+  return gulp.src(['public/**/*.css','!public/bower_components/**/*.css'])
     .pipe(plugins.concat('/css/main.css'))
     .pipe(gulp.dest(DEST))
     .pipe(plugins.cssnano())
