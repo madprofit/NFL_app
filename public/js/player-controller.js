@@ -10,7 +10,6 @@ function PlayerController($http, $stateParams) {
   self.playerId = playerId;
   console.log($stateParams.id);
 
-
   $http({
     method: 'GET',
     url: 'http://www.fantasyfootballnerd.com/service/players/json/test/QB/'
@@ -23,7 +22,7 @@ function PlayerController($http, $stateParams) {
     method: 'GET',
     url: 'http://www.fantasyfootballnerd.com/service/draft-projections/json/test/QB/'
   }).then(function successCallback(response) {
-    self.result = response.data.DraftProjections[2];
+    self.result = response.data.DraftProjections.displayName[1];
     console.log(self.result);
   });
 }

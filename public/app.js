@@ -11,27 +11,10 @@ function configuration($stateProvider, $urlRouterProvider) {
       url: '/',
       views: { '': {template: '<h1>Hello</h1>'},
            'columnOne': {templateUrl: 'partials/search1.html', controller: 'ListController1 as ctrl1'},
-           'columnTwo': {templateUrl: 'partials/search2.html'}},
-      controller: 'ListController1 as ctrl1'
+           'columnTwo': {templateUrl: 'partials/search2.html', controller: 'ListController2 as ctrl2'}},
     })
 
-    // {
-    //        'columnOne': { templateUrl: 'view1'},
-    //        'columnTwo': { template: 'view2'},
-    //         controller: function($scope) {}
-    //      }
 
-  // $stateProvider
-  //   .state('search1', {
-  //       url: '',
-  //       templateUrl: 'partials/search1.html',
-  //       controller: function($scope) {}
-  //     })
-      // .state('search2', {
-      //   url: '',
-      //   templateUrl: 'partials/search2.html',
-      //   controller: function($scope) {}
-      //})
     .state('list1', {
          url: '/results/:s',
          templateUrl: 'partials/list1.html',

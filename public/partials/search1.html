@@ -5,7 +5,7 @@
 <!-- <input ng-model="searchText"> -->
 <!-- <button ui-sref="list1({s:search1})">Search1</button> -->
 <ul ng-show="ctrl1.showSearch">
-  <li ng-repeat="player in ctrl1.results | filter: ctrl1.searchString | filter:searchText">  <!-- ng-if="player.displayName | orderBy: player.displayName" -->
+  <li ng-repeat="player in ctrl1.results | filter: ctrl1.searchString | filter:ctrl1.search1">  <!-- ng-if="player.displayName | orderBy: player.displayName" -->
     <a ui-sref="player1({id:player.playerId})">
         {{ player.displayName }}
     </a>

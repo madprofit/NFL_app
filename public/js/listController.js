@@ -9,7 +9,7 @@ function ListController1($http, $stateParams) {
   console.log($stateParams.s);
   var qb = [];
   self.showSearch = false;
-  self.search1;
+  self.search1= '';
   self.search = search;
   self.results;
 
