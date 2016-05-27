@@ -3,8 +3,9 @@ angular
   .controller('ChartController', ChartController);
 
 
-eventsFactory.$inject = ['$http']
+eventsFactory.$inject = ['$http'];
 
 function eventsFactory($http){
-  var eventsUrl = 'https://dojo-books.herokuapp.com/api/events'
-  var events = {}
+  var eventsUrl = 'https://dojo-books.herokuapp.com/api/events';
+  var events = {};
+}

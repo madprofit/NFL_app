@@ -13,7 +13,7 @@ function makeChart(key) {
     console.log(projections);
     var first = projections[0][key];
     var second = projections[3][key];
-    comparePlayers(first, second)
+    comparePlayers(first, second);
   });
 }
 

@@ -14,7 +14,7 @@ var ff = new FFNerd({ api_key:'3764iv27sbi6'});
 
 var port = process.env.PORT || 8000;
 var mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/db';
-var secret = process.env.SECRET || 'unicorns'
+var secret = process.env.SECRET || 'unicorns';
 
 var app = express();
 
@@ -49,4 +49,4 @@ app.use('/players', require('./routes/playersRouter'));
 
 app.listen(port, function() {
   console.log('Listening on port:', port);
-});;
+});

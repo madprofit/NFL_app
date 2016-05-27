@@ -1,6 +1,6 @@
 angular
   .module('nflApp', ['ui.router'])
-  .config(configuration)
+  .config(configuration);
   //.directive('navBar', navBar);
 
 function configuration($stateProvider, $urlRouterProvider) {
@@ -8,12 +8,11 @@ function configuration($stateProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('home', {
-     url: '/',
+      url: '/',
       views: { '': {template: '<h1>Hello</h1>'},
-           'columnOne': {templateUrl: 'partials/search1.html'},
-           'columnTwo': {templateUrl: 'partials/search2.html'},
-            controller: function($scope) {}
-         }
+           'columnOne': {templateUrl: 'partials/search1.html', controller: 'ListController1 as ctrl1'},
+           'columnTwo': {templateUrl: 'partials/search2.html'}},
+      controller: 'ListController1 as ctrl1'
     })
 
     // {
